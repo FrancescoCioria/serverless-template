@@ -1,0 +1,19 @@
+{
+  "name": "serverless-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:FrancescoCioria/serverless-template.git",
+  "author": "Francesco Cioria <firefelix@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^15.0.0",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4"
+  },
+  "scripts": {
+    "dev-start": "yarn ts-node --files --project ./tsconfig.json ./devServer.ts",
+    "start": "yarn ts-node --files --project ./tsconfig.json src",
+    "build": "yarn tsc --project ./tsconfig.json ",
+    "deploy": "yarn build && serverless deploy"
+  }
+}

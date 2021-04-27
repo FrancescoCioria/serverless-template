@@ -1,0 +1,27 @@
+service: serverless-template # replace with app name
+
+# defaults used for every function
+# if needed, override fields in single functions, not here
+provider:
+  name: aws
+  runtime: nodejs14.x
+  memorySize: 128
+  timeout: 6
+  profile: AWS-LAMBDA # use with correct profile
+
+functions:
+  lambda1:
+    handler: build/index.lambda1
+    description: Test lambda that returns an empty JSON object "{}"
+
+    # name: ${sls:stage}-lambdaName - optional, Deployed Lambda name
+    # provisionedConcurrency: 3 - optional, Count of provisioned lambda instances
+    # reservedConcurrency: 5 - optional, reserved concurrency limit for this function. By default, AWS uses account concurrency limit
+
+    events:
+      # https://www.serverless.com/framework/docs/providers/aws/events/apigateway/#simple-http-endpoint
+      - http:
+          path: /lambda1
+          method: get
+          integration: lambda
+          cors: true
