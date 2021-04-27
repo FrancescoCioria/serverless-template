@@ -6,6 +6,7 @@ service: serverless-template
 # defaults used for every function. If needed, override fields in single functions, not here
 provider:
   name: aws
+  region: eu-south-1
   runtime: nodejs14.x
   memorySize: 128
   timeout: 6

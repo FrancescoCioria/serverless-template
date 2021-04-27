@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "lib": ["ESNext"],
+    "module": "CommonJS",
     "strict": true,
     "pretty": true,
     "target": "ES2020",
