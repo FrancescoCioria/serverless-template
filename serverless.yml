@@ -1,13 +1,15 @@
-service: serverless-template # replace with app name
+# https://www.serverless.com/framework/docs/providers/aws/guide/functions/
 
-# defaults used for every function
-# if needed, override fields in single functions, not here
+# replace with app name
+service: serverless-template
+
+# defaults used for every function. If needed, override fields in single functions, not here
 provider:
   name: aws
   runtime: nodejs14.x
   memorySize: 128
   timeout: 6
-  profile: AWS-LAMBDA # use with correct profile
+  profile: AWS_PROFILE # replace with correct profile
 
 functions:
   lambda1:
