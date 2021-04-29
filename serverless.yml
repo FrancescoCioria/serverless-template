@@ -26,5 +26,4 @@ functions:
       - http:
           path: /lambda1
           method: get
-          integration: lambda
           cors: true
