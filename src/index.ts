@@ -29,7 +29,7 @@ const response = (body: any): Response => ({
   statusCode: 200
 });
 
-const error = (error: string): Response => ({
+const error = (error: unknown): Response => ({
   body: JSON.stringify({
     error
   }),
