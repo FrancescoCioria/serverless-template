@@ -12,7 +12,7 @@
   },
   "scripts": {
     "dev-start": "yarn ts-node --files --project ./tsconfig.json ./devServer.ts",
-    "start": "yarn ts-node --files --project ./tsconfig.json src",
+    "test": "yarn ts-node --files --project ./tsconfig.json src",
     "build": "yarn tsc --project ./tsconfig.json ",
     "deploy": "yarn build && serverless deploy"
   }
