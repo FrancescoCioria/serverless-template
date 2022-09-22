@@ -7,7 +7,7 @@ service: serverless-template
 provider:
   name: aws
   region: eu-south-1
-  runtime: nodejs14.x
+  runtime: nodejs16.x
   memorySize: 128
   timeout: 6
   profile: AWS_PROFILE # replace with correct profile
