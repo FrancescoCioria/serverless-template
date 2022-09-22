@@ -1,28 +1,5 @@
 import _lambda1 from "./lambda1";
-
-type Map = {
-  [k: string]: string;
-};
-
-type Event = {
-  resource: string;
-  path: string;
-  httpMethod: "GET" | "POST" | "PUT" | "PATCH" | "DELETE";
-  headers: Map;
-  queryStringParameters: null | Map;
-  pathParameters: null | Map;
-  stageVariables: null | Map;
-  requestContext: any;
-  body: string;
-  isBase64Encoded: boolean;
-};
-
-type Response = {
-  statusCode: number;
-  body: string;
-};
-
-type Handler = (event: Event) => Promise<Response>;
+import { Handler, Response } from "./models";
 
 const response = (body: any): Response => ({
   body: JSON.stringify(body),
